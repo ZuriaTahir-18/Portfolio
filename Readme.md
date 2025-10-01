@@ -32,7 +32,7 @@ It is designed to highlight my work in **Data Science, AI/ML, and software devel
 
 ## 🔗 Live Demo
 
-<a href="https://zuriatahir-18.github.io/portfolio/" target="_blank">
+<a href="https://zuriatahir-18.github.io/Portfolio/" target="_blank">
   <img src="https://img.shields.io/badge/Portfolio-Live-0e76a8?style=for-the-badge&logo=google-chrome" />
 </a>
 ---
