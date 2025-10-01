@@ -31,7 +31,6 @@ It is designed to highlight my work in **Data Science, AI/ML, and software devel
 ---
 
 ## 🔗 Live Demo
-👉 [View Portfolio](https://yourusername.github.io/Portfolio/)  
 
 <a href="https://zuriatahir-18.github.io/portfolio/" target="_blank">
   <img src="https://img.shields.io/badge/Portfolio-Live-0e76a8?style=for-the-badge&logo=google-chrome" />
