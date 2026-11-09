@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zuria Tahir - AI Automation & AI Engineer</title>
-  <!-- CSS link -->
-  <link rel="stylesheet" href="style.css">
-  <!-- JS link -->
-  <script src="script.js" defer></script>
+  <meta name="description" content="Zuria Tahir, AI Automation Engineer building agentic workflows, AI agents, RAG pipelines and production automation systems.">
+  <meta name="theme-color" content="#070d0b">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <!-- <h2>ZT</h2> -->
-      </div>
+      <a href="#home" class="nav-logo">ZT<span>.</span></a>
       <ul class="nav-menu">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -26,518 +28,531 @@
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#certificates" class="nav-link">Certificates</a></li>
-
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-cv-item"><a href="Zuria Tahir.pdf" target="_blank" class="nav-cv"><i class="fas fa-file-arrow-down"></i> View CV</a></li>
       </ul>
-      <div class="hamburger">
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
-      </div>
+      </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">Hi, I'm <span class="highlight">Zuria Tahir</span></h1>
-          <h2 class="hero-subtitle">AI Automation Engineer | AI Engineer | Agentic Systems Builder</h2>
-         <p class="hero-description">
-            AI Automation Engineer specializing in building scalable AI systems, 
-            agentic workflows, RAG pipelines, and intelligent automation infrastructures. 
-            Experienced in developing autonomous AI agents, email automation engines, 
-            and production-ready ML solutions using modern AI tools and cloud platforms.
-          </p>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="container hero-container">
+      <div class="hero-text">
+        <span class="status-pill"><span class="pulse-dot"></span> Open to AI Automation &amp; AI Engineering roles</span>
+        <h1 class="hero-title">Hi, I'm <span class="grad">Zuria Tahir</span></h1>
+        <p class="hero-role" aria-label="AI Automation Engineer, AI Engineer, Agentic Systems Builder">
+          <span class="prompt">&gt;</span> <span class="typed">AI Automation Engineer</span><span class="caret">_</span>
+        </p>
+        <p class="hero-description">
+          AI Automation Engineer specializing in building scalable AI systems,
+          agentic workflows, RAG pipelines, and intelligent automation infrastructures.
+          Experienced in developing autonomous AI agents, email automation engines,
+          and production-ready ML solutions using modern AI tools and cloud platforms.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          <a href="Zuria Tahir.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-lines"></i> View CV</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/ZuriaTahir-18" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/zuria-tahir-9b5078319/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:zuriatahir18@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
 
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            <a href="Zuria Tahir.pdf" target="_blank" class="btn btn-tertiary">View CV</a>
-
-            
+      <!-- Animated workflow canvas -->
+      <div class="flow-card" aria-hidden="true">
+        <div class="flow-head">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="flow-name">lead-automation.workflow</span>
+          <span class="flow-live"><span class="pulse-dot"></span> Active</span>
+        </div>
+        <div class="flow">
+          <svg class="flow-lines" viewBox="0 0 520 310">
+            <path id="p1" class="wire" d="M149 175 L195 175"/>
+            <path id="p2" class="wire" d="M265 75 L265 140"/>
+            <path id="p3" class="wire" d="M335 165 C353 165 353 95 371 95"/>
+            <path id="p4" class="wire" d="M335 185 C353 185 353 255 371 255"/>
+            <circle r="4" class="pulse"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+            <circle r="4" class="pulse"><animateMotion dur="1.6s" begin="0.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#p2"/></animateMotion></circle>
+            <circle r="4" class="pulse"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+            <circle r="4" class="pulse lime"><animateMotion dur="1.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+          </svg>
+          <div class="node" style="left:2.7%;top:48.39%;">
+            <span class="node-icon"><i class="fas fa-bolt"></i></span>
+            <span class="node-text"><b>New Lead</b><small>trigger</small></span>
           </div>
-          <div class="hero-social">
-            <a href="https://github.com/ZuriaTahir-18" target="_blank" class="social-link">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/zuria-tahir-9b5078319/" target="_blank" class="social-link">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:zuriatahi18@gmail.com" class="social-link">
-              <i class="fas fa-envelope"></i>
-            </a>
+          <div class="node" style="left:38%;top:8.06%;">
+            <span class="node-icon"><i class="fas fa-database"></i></span>
+            <span class="node-text"><b>Knowledge</b><small>RAG</small></span>
+          </div>
+          <div class="node node-agent" style="left:37.5%;top:45.16%;">
+            <span class="node-icon"><i class="fas fa-robot"></i></span>
+            <span class="node-text"><b>AI Agent</b><small>reason + act</small></span>
+          </div>
+          <div class="node" style="left:71.35%;top:22.58%;">
+            <span class="node-icon"><i class="fas fa-address-card"></i></span>
+            <span class="node-text"><b>Update CRM</b><small>contact + tags</small></span>
+          </div>
+          <div class="node node-done" style="left:71.35%;top:74.19%;">
+            <span class="node-icon"><i class="fas fa-calendar-check"></i></span>
+            <span class="node-text"><b>Booked</b><small>calendar</small></span>
           </div>
         </div>
-        <!-- Profile image removed -->
+        <div class="flow-log">
+          <span class="log-ok"><i class="fas fa-check"></i></span>
+          <span class="log-line">lead captured from website form</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Tool marquee -->
+  <div class="marquee" aria-label="Tools I work with">
+    <div class="marquee-track">
+      <span>n8n</span><span>Make.com</span><span>OpenAI</span><span>GoHighLevel</span><span>Supabase</span><span>LangChain</span><span>Vapi</span><span>Whisper</span><span>FAISS</span><span>Python</span><span>Railway</span><span>Airtable</span><span>PyTorch</span><span>REST APIs</span>
+      <span>n8n</span><span>Make.com</span><span>OpenAI</span><span>GoHighLevel</span><span>Supabase</span><span>LangChain</span><span>Vapi</span><span>Whisper</span><span>FAISS</span><span>Python</span><span>Railway</span><span>Airtable</span><span>PyTorch</span><span>REST APIs</span>
+    </div>
+  </div>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
+      <div class="section-head reveal">
+        <span class="kicker">01 / About</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
           <p>
-  I am an AI Automation & AI Engineer with a strong foundation in Machine Learning, 
-  Deep Learning, NLP, and Agentic Workflows. I design and deploy intelligent systems 
-  that automate complex business processes and enhance operational efficiency.
-</p>
-<p>
-  My expertise includes building RAG systems, scalable automation pipelines, 
-  AI-powered outreach engines, and production-ready AI applications using tools 
-  like n8n, Make, Railway, and modern LLM frameworks.
-</p>
-
+            I am an AI Automation &amp; AI Engineer with a strong foundation in Machine Learning,
+            Deep Learning, NLP, and Agentic Workflows. I design and deploy intelligent systems
+            that automate complex business processes and enhance operational efficiency.
+          </p>
+          <p>
+            My expertise includes building RAG systems, scalable automation pipelines,
+            AI-powered outreach engines, and production-ready AI applications using tools
+            like n8n, Make, Railway, and modern LLM frameworks.
+          </p>
+        </div>
+        <div class="terminal reveal">
+          <div class="terminal-head"><span class="dots"><i></i><i></i><i></i></span><span>~/zuria</span></div>
+<pre class="terminal-body"><span class="t-prompt">$</span> cat profile.json
+{
+  <span class="t-key">"role"</span>: <span class="t-str">"AI Automation Engineer"</span>,
+  <span class="t-key">"focus"</span>: [<span class="t-str">"Agentic Workflows"</span>, <span class="t-str">"RAG"</span>, <span class="t-str">"AI Agents"</span>],
+  <span class="t-key">"tools"</span>: [<span class="t-str">"n8n"</span>, <span class="t-str">"Make"</span>, <span class="t-str">"Python"</span>, <span class="t-str">"OpenAI"</span>],
+  <span class="t-key">"education"</span>: <span class="t-str">"BS Data Science"</span>,
+  <span class="t-key">"location"</span>: <span class="t-str">"Lahore, Pakistan"</span>,
+  <span class="t-key">"status"</span>: <span class="t-ok">"open_to_work"</span>
+}</pre>
         </div>
       </div>
     </div>
   </section>
 
-     <!-- Skills Section -->
-    <!-- Skills Section -->
-<section id="skills" class="skills">
+  <!-- Skills Section -->
+  <section id="skills" class="section">
     <div class="container">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <div class="skills-grid">
-            
-            <!-- Programming Languages -->
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Sql</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                </div>
-            </div>
-
-            <!-- ML & AI Libraries -->
-            <div class="skill-category">
-                <h3><i class="fas fa-brain"></i> ML & AI Libraries</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">OpenAI GPT-4o</span>
-                    <span class="skill-tag">Whisper API</span>
-                    <span class="skill-tag">Vision API</span>
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">FAISS</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Scikit-learn</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                </div>
-            </div>
-
-            <!-- Tools & Platforms -->
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">n8n</span>
-                    <span class="skill-tag">Supabase (Vector DB)</span>
-                    <span class="skill-tag">Make.com</span>
-                    <span class="skill-tag">Whapi.cloud</span>
-                    <span class="skill-tag">Shopify API</span>
-                    <span class="skill-tag">REST API</span>
-                    <span class="skill-tag">Railway</span>
-                    <span class="skill-tag">Streamlit</span>
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Airtable</span>
-
-                </div>
-            </div>
-
-            <!-- Domains -->
-            <div class="skill-category">
-                <h3><i class="fas fa-chart-line"></i> Domains</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">AI Automation</span>
-                    <span class="skill-tag">Agentic Workflows</span>
-                    <span class="skill-tag">RAG Systems</span>
-                    <span class="skill-tag">Multimodal AI</span>
-                    <span class="skill-tag">E-commerce Automation</span>
-                    <span class="skill-tag">Generative AI</span>
-                </div>
-            </div>
-
+      <div class="section-head reveal">
+        <span class="kicker">02 / Skills</span>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h3>Programming Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
         </div>
+        <div class="skill-category reveal">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>ML &amp; AI Libraries</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenAI GPT-4o</span>
+            <span class="skill-tag">Whisper API</span>
+            <span class="skill-tag">Vision API</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">n8n</span>
+            <span class="skill-tag">Supabase (Vector DB)</span>
+            <span class="skill-tag">Make.com</span>
+            <span class="skill-tag">Whapi.cloud</span>
+            <span class="skill-tag">Shopify API</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">Railway</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Airtable</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Domains</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Automation</span>
+            <span class="skill-tag">Agentic Workflows</span>
+            <span class="skill-tag">RAG Systems</span>
+            <span class="skill-tag">Multimodal AI</span>
+            <span class="skill-tag">E-commerce Automation</span>
+            <span class="skill-tag">Generative AI</span>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-
+  </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects">
+  <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-head reveal">
+        <span class="kicker">03 / Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter is-active" data-filter="all">All <span class="count"></span></button>
+        <button class="filter" data-filter="agents">AI Agents <span class="count"></span></button>
+        <button class="filter" data-filter="automation">Automation <span class="count"></span></button>
+        <button class="filter" data-filter="ml">ML &amp; Deep Learning <span class="count"></span></button>
+      </div>
+
       <div class="projects-grid">
 
-  <!-- Project: GoHighLevel AI Lead Nurture System -->
-  <div class="project-card">
-    <h3>GoHighLevel AI Lead Nurture System</h3>
-    <span class="project-type">AI Agents | CRM Automation</span>
-    <p class="project-description">
-      A GoHighLevel setup for a US advertising agency with a 35-email nurture campaign and a booking
-      calendar. Two AI agents share one knowledge base: an email agent that answers lead replies within
-      minutes and follows up with quiet leads, and a website chatbot that captures visitors as contacts.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">GoHighLevel</span>
-      <span class="tech-tag">Conversation AI</span>
-      <span class="tech-tag">Workflows</span>
-      <span class="tech-tag">GoHighLevel API</span>
-      <span class="tech-tag">Python</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/GoHighLevel-AI-Lead-Nurture-System" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Details
-      </a>
-    </div>
-  </div>
+        <!-- Project: GoHighLevel AI Lead Nurture System -->
+        <article class="project-card featured reveal" data-cat="agents">
+          <span class="badge-new">NEW</span>
+          <div class="card-top"><span class="card-index"></span><span class="project-type">AI Agents | CRM Automation</span></div>
+          <h3>GoHighLevel AI Lead Nurture System</h3>
+          <p class="project-description">
+            A GoHighLevel setup for a US advertising agency with a 35-email nurture campaign and a booking
+            calendar. Two AI agents share one knowledge base: an email agent that answers lead replies within
+            minutes and follows up with quiet leads, and a website chatbot that captures visitors as contacts.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">GoHighLevel</span>
+            <span class="tech-tag">Conversation AI</span>
+            <span class="tech-tag">Workflows</span>
+            <span class="tech-tag">GoHighLevel API</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/GoHighLevel-AI-Lead-Nurture-System" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Details <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 1: Enterprise AI Lead -->
-  <div class="project-card">
-    <h3>Enterprise AI Lead Automation Engine</h3>
-    <span class="project-type">AI Automation | Agentic Workflow</span>
-    <p class="project-description">
-      A scalable AI outbound automation system built in n8n with multi-workflow orchestration, 
-      behavioral tracking, GPT-powered auto-replies, and intelligent stop-logic to maximize 
-      conversions while maintaining high email deliverability.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">n8n</span>
-      <span class="tech-tag">OpenAI API</span>
-      <span class="tech-tag">GPT-4o-mini</span>
-      <span class="tech-tag">Microsoft Graph API</span>
-      <span class="tech-tag">ZeroBounce</span>
-      <span class="tech-tag">Cal.com</span>
-      <span class="tech-tag">Google Sheets</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/Autonomous-AI-Lead-Engagement-Engine" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 1: Enterprise AI Lead -->
+        <article class="project-card reveal" data-cat="automation">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">AI Automation | Agentic Workflow</span></div>
+          <h3>Enterprise AI Lead Automation Engine</h3>
+          <p class="project-description">
+            A scalable AI outbound automation system built in n8n with multi-workflow orchestration,
+            behavioral tracking, GPT-powered auto-replies, and intelligent stop-logic to maximize
+            conversions while maintaining high email deliverability.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">GPT-4o-mini</span>
+            <span class="tech-tag">Microsoft Graph API</span>
+            <span class="tech-tag">ZeroBounce</span>
+            <span class="tech-tag">Cal.com</span>
+            <span class="tech-tag">Google Sheets</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/Autonomous-AI-Lead-Engagement-Engine" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 2: WhatsApp Assistant -->
-  <div class="project-card">
-    <h3>Multimodal AI WhatsApp Assistant</h3>
-    <span class="project-type">AI Automation | Multimodal RAG</span>
-    <p class="project-description">
-      A fully automated WhatsApp bot capable of processing text, transcribing voice notes (Whisper API), 
-      and analyzing images (GPT-4o Vision). Integrated with Supabase Vector Store for RAG to provide 
-      context-aware responses.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">n8n</span>
-      <span class="tech-tag">OpenAI API</span>
-      <span class="tech-tag">Supabase</span>
-      <span class="tech-tag">Whapi.cloud</span>
-      <span class="tech-tag">REST API</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/ai-whatsapp-assistant-n8n" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 2: WhatsApp Assistant -->
+        <article class="project-card reveal" data-cat="agents">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">AI Automation | Multimodal RAG</span></div>
+          <h3>Multimodal AI WhatsApp Assistant</h3>
+          <p class="project-description">
+            A fully automated WhatsApp bot capable of processing text, transcribing voice notes (Whisper API),
+            and analyzing images (GPT-4o Vision). Integrated with Supabase Vector Store for RAG to provide
+            context-aware responses.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Whapi.cloud</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/ai-whatsapp-assistant-n8n" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 3: ShopTalk AI -->
-  <div class="project-card">
-    <h3>ShopTalk AI: Call Summary & Lead Capture</h3>
-    <span class="project-type">Voice AI | CRM Automation</span>
-    <p class="project-description">
-      An automated lead management pipeline that captures Vapi.ai voice call transcripts, 
-      uses conditional logic to generate instant Slack summaries, and logs high-intent leads 
-      into a Google Sheets CRM.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">n8n</span>
-      <span class="tech-tag">Vapi API</span>
-      <span class="tech-tag">Webhooks</span>
-      <span class="tech-tag">Slack API</span>
-      <span class="tech-tag">Google Sheets</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/ShopTalk-AI-Call-Handler" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 3: ShopTalk AI -->
+        <article class="project-card reveal" data-cat="agents">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">Voice AI | CRM Automation</span></div>
+          <h3>ShopTalk AI: Call Summary &amp; Lead Capture</h3>
+          <p class="project-description">
+            An automated lead management pipeline that captures Vapi.ai voice call transcripts,
+            uses conditional logic to generate instant Slack summaries, and logs high-intent leads
+            into a Google Sheets CRM.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">Vapi API</span>
+            <span class="tech-tag">Webhooks</span>
+            <span class="tech-tag">Slack API</span>
+            <span class="tech-tag">Google Sheets</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/ShopTalk-AI-Call-Handler" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 4: Price Monitor -->
-  <div class="project-card">
-    <h3>AI-Powered E-Commerce Price Monitor</h3>
-    <span class="project-type">AI Automation | Web Scraping</span>
-    <p class="project-description">
-      An intelligent price tracking system built in n8n that scrapes live product data, builds 
-      historical price logs in Google Sheets, and uses AI Agents to identify high-value deals 
-      with instant Slack notifications.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">n8n</span>
-      <span class="tech-tag">OpenAI API</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Google Sheets</span>
-      <span class="tech-tag">Slack API</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/AI-Ecom-Price-Monitor" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 4: Price Monitor -->
+        <article class="project-card reveal" data-cat="automation">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">AI Automation | Web Scraping</span></div>
+          <h3>AI-Powered E-Commerce Price Monitor</h3>
+          <p class="project-description">
+            An intelligent price tracking system built in n8n that scrapes live product data, builds
+            historical price logs in Google Sheets, and uses AI Agents to identify high-value deals
+            with instant Slack notifications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Google Sheets</span>
+            <span class="tech-tag">Slack API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/AI-Ecom-Price-Monitor" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 5: TikTok Automation -->
-  <div class="project-card">
-    <h3>Airtable → TikTok Auto Posting</h3>
-    <span class="project-type">Automation | Social Media</span>
-    <p class="project-description">
-      Automates TikTok posting from Airtable using Make.com and Zernio. Supports Video, Static Image, 
-      and Carousel posts with smart routing, scheduled posting every 15 minutes, and auto-sync back to Airtable.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">Make.com</span>
-      <span class="tech-tag">Airtable</span>
-      <span class="tech-tag">Zernio API</span>
-      <span class="tech-tag">TikTok API</span>
-      <span class="tech-tag">JSON</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/tiktok-airtable-scheduler" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 5: TikTok Automation -->
+        <article class="project-card reveal" data-cat="automation">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">Automation | Social Media</span></div>
+          <h3>Airtable → TikTok Auto Posting</h3>
+          <p class="project-description">
+            Automates TikTok posting from Airtable using Make.com and Zernio. Supports Video, Static Image,
+            and Carousel posts with smart routing, scheduled posting every 15 minutes, and auto-sync back to Airtable.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Make.com</span>
+            <span class="tech-tag">Airtable</span>
+            <span class="tech-tag">Zernio API</span>
+            <span class="tech-tag">TikTok API</span>
+            <span class="tech-tag">JSON</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/tiktok-airtable-scheduler" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 6: Wikipedia RAG -->
-  <div class="project-card">
-    <h3>Wikipedia RAG Assistant</h3>
-    <span class="project-type">RAG Project</span>
-    <p class="project-description">
-      A RAG app that retrieves Wikipedia content with FAISS and generates answers using 
-      Mistral-7B for concise natural responses.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">FAISS</span>
-      <span class="tech-tag">Mistral-7B</span>
-      <span class="tech-tag">Flask</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/Wikipedia-rag-assistant" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 6: Wikipedia RAG -->
+        <article class="project-card reveal" data-cat="ml">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">RAG Project</span></div>
+          <h3>Wikipedia RAG Assistant</h3>
+          <p class="project-description">
+            A RAG app that retrieves Wikipedia content with FAISS and generates answers using
+            Mistral-7B for concise natural responses.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FAISS</span>
+            <span class="tech-tag">Mistral-7B</span>
+            <span class="tech-tag">Flask</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/Wikipedia-rag-assistant" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 7: KSFormer -->
-  <div class="project-card">
-    <h3>KSFormer: Skin Lesion Segmentation</h3>
-    <span class="project-type">Deep Learning</span>
-    <p class="project-description">
-      SegFormer-based medical image segmentation with CBAM, KSCO, STFT, and STET modules, 
-      tested on ISIC-2018 & PH2 datasets.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">PyTorch</span>
-      <span class="tech-tag">CNN</span>
-      <span class="tech-tag">Attention</span>
-      <span class="tech-tag">Grad-CAM</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/Skin-leison-Segmentation" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 7: KSFormer -->
+        <article class="project-card reveal" data-cat="ml">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">Deep Learning</span></div>
+          <h3>KSFormer: Skin Lesion Segmentation</h3>
+          <p class="project-description">
+            SegFormer-based medical image segmentation with CBAM, KSCO, STFT, and STET modules,
+            tested on ISIC-2018 &amp; PH2 datasets.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Attention</span>
+            <span class="tech-tag">Grad-CAM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/Skin-leison-Segmentation" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 8: CIFAR-10 -->
-  <div class="project-card">
-    <h3>CIFAR-10 Image Classifier</h3>
-    <span class="project-type">Deep Learning</span>
-    <p class="project-description">
-      CNN classifier on CIFAR-10 dataset with augmentation, deployed in Streamlit for 
-      real-time predictions.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">TensorFlow</span>
-      <span class="tech-tag">Keras</span>
-      <span class="tech-tag">CNN</span>
-      <span class="tech-tag">Streamlit</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/cifar10-image-classifier-streamlit" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 8: CIFAR-10 -->
+        <article class="project-card reveal" data-cat="ml">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">Deep Learning</span></div>
+          <h3>CIFAR-10 Image Classifier</h3>
+          <p class="project-description">
+            CNN classifier on CIFAR-10 dataset with augmentation, deployed in Streamlit for
+            real-time predictions.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Keras</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/cifar10-image-classifier-streamlit" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-  <!-- Project 9: Motor Fault -->
-  <div class="project-card">
-    <h3>Motor Fault Classification</h3>
-    <span class="project-type">Machine Learning</span>
-    <p class="project-description">
-      Fault classification using current signals with KNN, SVM, Logistic Regression, and Naïve Bayes. 
-      PCA applied for dimensionality reduction.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">scikit-learn</span>
-      <span class="tech-tag">PCA</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ZuriaTahir-18/Motor-Fault-Classification-using-Machine-Learning" target="_blank" class="project-btn">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
+        <!-- Project 9: Motor Fault -->
+        <article class="project-card reveal" data-cat="ml">
+          <div class="card-top"><span class="card-index"></span><span class="project-type">Machine Learning</span></div>
+          <h3>Motor Fault Classification</h3>
+          <p class="project-description">
+            Fault classification using current signals with KNN, SVM, Logistic Regression, and Naïve Bayes.
+            PCA applied for dimensionality reduction.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">PCA</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ZuriaTahir-18/Motor-Fault-Classification-using-Machine-Learning" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View Code <i class="fas fa-arrow-right arrow"></i>
+            </a>
+          </div>
+        </article>
 
-</div>
-
+      </div>
+    </div>
+  </section>
 
   <!-- Education Section -->
-  <section id="education" class="education">
+  <section id="education" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="education-grid">
-        <div class="education-card">
-          <div class="education-header">
-            <h3>Bachelor of Data Science</h3>
-            <span class="institution">Gift University,Gujranwala(2021 - 2025)</span>
-          </div>
+      <div class="section-head reveal">
+        <span class="kicker">04 / Education</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="education-card reveal">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-body">
+          <h3>Bachelor of Data Science</h3>
+          <p class="institution">GIFT University, Gujranwala</p>
         </div>
+        <span class="edu-years">2021 - 2025</span>
       </div>
     </div>
   </section>
+
   <!-- Certificates Section -->
-   <!-- Certificates Section -->
-  <section id="certificates" class="projects">
+  <section id="certificates" class="section">
     <div class="container">
-      <h2 class="section-title">Certificates</h2>
-      <div class="projects-grid">
-
-        <!-- Certificate 1 -->
-        <div class="project-card">
-          <h3>Data Visualization: Empowering Business with Insights</h3>
-          <span class="project-type">Tata</span>
-          <div class="project-links">
-            <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_68b092aa155564a4f91eaad4_1758023944353_completion_certificate.pdf" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 2 -->
-        <div class="project-card">
-          <h3>GenAI Job Simulation</h3>
-          <span class="project-type">BCGX</span>
-          <div class="project-links">
-            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/gabev3vXhuACr48eb_SKZxezskWgmFjRvj9_68b092aa155564a4f91eaad4_1756413583291_completion_certificate.pdf" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 3 -->
-        <div class="project-card">
-          <h3>Parsing Data Table</h3>
-          <span class="project-type">Codesignal</span>
-          <div class="project-links">
-            <a href="https://codesignal.com/learn/certificates/cmfliaq21002zk404b16qoy04/courses/836" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 4 -->
-        <div class="project-card">
-          <h3>Fundamentals of Text Data Manipulation</h3>
-          <span class="project-type">Codesignal</span>
-          <div class="project-links">
-            <a href="https://codesignal.com/learn/certificates/cmfliaq21002zk404b16qoy04/courses/835" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-
-
-                <div class="project-card">
+      <div class="section-head reveal">
+        <span class="kicker">05 / Learning</span>
+        <h2 class="section-title">Certificates</h2>
+      </div>
+      <div class="cert-grid">
+        <a class="cert-card reveal" href="https://courses.cognitiveclass.ai/certificates/850bff8b02204a869cd975770b7b3b99" target="_blank">
+          <span class="cert-issuer">IBM</span>
           <h3>Prompt Engineering</h3>
-          <span class="project-type">IBM</span>
-          <div class="project-links">
-            <a href="https://courses.cognitiveclass.ai/certificates/850bff8b02204a869cd975770b7b3b99" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 5 -->
-        <div class="project-card">
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_68b092aa155564a4f91eaad4_1758023944353_completion_certificate.pdf" target="_blank">
+          <span class="cert-issuer">Tata</span>
+          <h3>Data Visualization: Empowering Business with Insights</h3>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/gabev3vXhuACr48eb_SKZxezskWgmFjRvj9_68b092aa155564a4f91eaad4_1756413583291_completion_certificate.pdf" target="_blank">
+          <span class="cert-issuer">BCGX</span>
+          <h3>GenAI Job Simulation</h3>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://codesignal.com/learn/certificates/cmfliaq21002zk404b16qoy04/courses/836" target="_blank">
+          <span class="cert-issuer">Codesignal</span>
+          <h3>Parsing Data Table</h3>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://codesignal.com/learn/certificates/cmfliaq21002zk404b16qoy04/courses/835" target="_blank">
+          <span class="cert-issuer">Codesignal</span>
+          <h3>Fundamentals of Text Data Manipulation</h3>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://certificates.simplicdn.net/share/8747184_91269941754542773180.pdf" target="_blank">
+          <span class="cert-issuer">Simplilearn</span>
           <h3>Google Sheets</h3>
-          <span class="project-type">Simplilearn</span>
-          <div class="project-links">
-            <a href="https://certificates.simplicdn.net/share/8747184_91269941754542773180.pdf" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 6 -->
-        <div class="project-card">
-          <h3>Data Science & Analytics</h3>
-          <span class="project-type">HP Life</span>
-          <div class="project-links">
-            <a href="https://www.life-global.org/certificate/c6821de9-cf98-481c-b7e2-f414d91ecf21" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
-        <!-- Certificate 7 -->
-        <div class="project-card">
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://www.life-global.org/certificate/c6821de9-cf98-481c-b7e2-f414d91ecf21" target="_blank">
+          <span class="cert-issuer">HP Life</span>
+          <h3>Data Science &amp; Analytics</h3>
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+        <a class="cert-card reveal" href="https://udemy-certificate.s3.amazonaws.com/image/UC-07504222-1a89-4541-8ff1-23893c0676e1.jpg" target="_blank">
+          <span class="cert-issuer">Udemy</span>
           <h3>Numpy For Data Science – Real Time Exercises</h3>
-          <span class="project-type">Udemy</span>
-          <div class="project-links">
-            <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-07504222-1a89-4541-8ff1-23893c0676e1.jpg" target="_blank" class="project-btn">
-              View Certificate
-            </a>
-          </div>
-        </div>
-
+          <span class="cert-link">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
       </div>
     </div>
   </section>
-
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <p><a href="mailto:zuriatahi18@gmail.com">zuriatahir18@gmail.com</a></p>
+      <div class="contact-panel reveal">
+        <span class="kicker">06 / Contact</span>
+        <h2 class="contact-title">Let's build something that <span class="grad">runs on its own.</span></h2>
+        <p class="contact-sub">Have a workflow to automate or an AI role to fill? I'd love to hear about it.</p>
+        <div class="contact-actions">
+          <a href="mailto:zuriatahir18@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+          <a href="https://www.linkedin.com/in/zuria-tahir-9b5078319/" target="_blank" class="btn btn-ghost"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
         </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <p><a href="tel:+923257987885">+92 325 7987885</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>Lahore, Pakistan</p>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <p><a href="https://github.com/ZuriaTahir-18" target="_blank">github.com/ZuriaTahir-18</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-linkedin"></i>
-          <p><a href="https://www.linkedin.com/in/zuria-tahir-9b5078319/" target="_blank">linkedin.com/in/zuria-tahir</a></p>
+        <div class="contact-info">
+          <a class="contact-item" href="mailto:zuriatahir18@gmail.com"><i class="fas fa-envelope"></i><span>zuriatahir18@gmail.com</span></a>
+          <div class="contact-item"><i class="fas fa-location-dot"></i><span>Lahore, Pakistan</span></div>
+          <a class="contact-item" href="https://github.com/ZuriaTahir-18" target="_blank"><i class="fab fa-github"></i><span>github.com/ZuriaTahir-18</span></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/zuria-tahir-9b5078319/" target="_blank"><i class="fab fa-linkedin"></i><span>linkedin.com/in/zuria-tahir</span></a>
         </div>
       </div>
     </div>
@@ -545,21 +560,13 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Zuria Tahir. All rights reserved.</p>
+    <div class="container footer-inner">
+      <span class="nav-logo small">ZT<span>.</span></span>
+      <p>&copy; 2026 Zuria Tahir. All rights reserved.</p>
+      <a href="#home" class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

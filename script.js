@@ -1,233 +1,147 @@
+// Zuria Tahir - Portfolio interactions
 
-// Mobile Navigation Toggle
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------- Mobile navigation ----------
+const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+function setMenu(open) {
+  hamburger.classList.toggle('active', open);
+  navMenu.classList.toggle('active', open);
+  navbar.classList.toggle('menu-open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+}
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+hamburger.addEventListener('click', () => setMenu(!navMenu.classList.contains('active')));
+document.querySelectorAll('.nav-menu a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+// ---------- Scroll: navbar, progress bar, active link ----------
+const progress = document.querySelector('.scroll-progress');
+const sections = [...document.querySelectorAll('section[id]')];
+const navLinks = [...document.querySelectorAll('.nav-link')];
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    }
-});
+function onScroll() {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 20);
 
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+  let current = sections[0].id;
+  sections.forEach(section => {
+    if (y >= section.offsetTop - 160) current = section.id;
+  });
+  navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
+}
 
-// Animate elements on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-const observer = new IntersectionObserver((entries) => {
+// ---------- Reveal on scroll ----------
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.classList.add('in');
+        observer.unobserve(el);
+        setTimeout(() => { el.style.transitionDelay = ''; }, 1000);
+      }
     });
-}, observerOptions);
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.project-card, .skill-category, .timeline-item, .education-card, .certification-card, .contact-item');
-    
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100, callback = null) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        } else if (callback) {
-            callback();
-        }
-    }
-    type();
+  revealEls.forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 3) * 80}ms`;
+    observer.observe(el);
+  });
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
 }
 
-// Initialize typing effect when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        // Store the original HTML content
-        const originalHTML = heroTitle.innerHTML;
-        // Extract just the text content for typing effect
-        const textContent = heroTitle.textContent || heroTitle.innerText;
-        
-        // Clear the content and start typing
-        heroTitle.innerHTML = '';
-        typeWriter(heroTitle, textContent, 50, () => {
-            // After typing is complete, restore the original HTML with spans
-            heroTitle.innerHTML = originalHTML;
-        });
-    }
-});
+// ---------- Typed roles in the hero ----------
+const typedEl = document.querySelector('.typed');
+const roles = ['AI Automation Engineer', 'AI Engineer', 'Agentic Systems Builder'];
 
-// Project card hover effects
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-    });
-});
+if (typedEl && !reduceMotion) {
+  let roleIndex = 0;
+  let charIndex = roles[0].length;
+  let deleting = true;
 
-// Skill tag hover effects
-document.querySelectorAll('.skill-tag').forEach(tag => {
-    tag.addEventListener('mouseenter', () => {
-        tag.style.transform = 'scale(1.05)';
-        tag.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-    });
-    
-    tag.addEventListener('mouseleave', () => {
-        tag.style.transform = 'scale(1)';
-        tag.style.boxShadow = 'none';
-    });
-});
-
-// Contact form validation (if you add a contact form later)
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// Scroll to top functionality
-const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollToTopBtn.className = 'scroll-to-top';
-scrollToTopBtn.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #2563eb;
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    transition: all 0.3s ease;
-    z-index: 1000;
-`;
-
-document.body.appendChild(scrollToTopBtn);
-
-scrollToTopBtn.addEventListener('mouseenter', () => {
-    scrollToTopBtn.style.transform = 'scale(1.1)';
-});
-
-scrollToTopBtn.addEventListener('mouseleave', () => {
-    scrollToTopBtn.style.transform = 'scale(1)';
-});
-
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = 'flex';
+  function tick() {
+    const role = roles[roleIndex];
+    if (deleting) {
+      charIndex--;
+      typedEl.textContent = role.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+      setTimeout(tick, 35);
     } else {
-        scrollToTopBtn.style.display = 'none';
+      const next = roles[roleIndex];
+      charIndex++;
+      typedEl.textContent = next.slice(0, charIndex);
+      if (charIndex === next.length) {
+        deleting = true;
+        setTimeout(tick, 2200);
+      } else {
+        setTimeout(tick, 70);
+      }
     }
+  }
+  setTimeout(tick, 2400);
+}
+
+// ---------- Workflow log ticker ----------
+const logLine = document.querySelector('.log-line');
+const logs = [
+  'lead captured from website form',
+  'agent answered from knowledge base',
+  'CRM updated with contact + tags',
+  'meeting booked, reminders scheduled'
+];
+
+if (logLine && !reduceMotion) {
+  let logIndex = 0;
+  setInterval(() => {
+    logLine.classList.add('swap');
+    setTimeout(() => {
+      logIndex = (logIndex + 1) % logs.length;
+      logLine.textContent = logs[logIndex];
+      logLine.classList.remove('swap');
+    }, 350);
+  }, 2600);
+}
+
+// ---------- Project filters ----------
+const grid = document.querySelector('.projects-grid');
+const cards = [...document.querySelectorAll('.project-card')];
+const filters = [...document.querySelectorAll('.filter')];
+
+filters.forEach(btn => {
+  const key = btn.dataset.filter;
+  const count = key === 'all' ? cards.length : cards.filter(c => c.dataset.cat === key).length;
+  btn.querySelector('.count').textContent = count;
+
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.toggle('is-active', b === btn));
+    grid.classList.toggle('is-filtered', key !== 'all');
+    cards.forEach(card => {
+      const show = key === 'all' || card.dataset.cat === key;
+      card.classList.toggle('is-hidden', !show);
+      if (show) card.classList.add('in');
+    });
+  });
 });
 
-// Add CSS for scroll to top button
-const style = document.createElement('style');
-style.textContent = `
-    .scroll-to-top:hover {
-        background: #1d4ed8 !important;
-        transform: scale(1.1);
-    }
-    
-    .nav-link.active {
-        color: #2563eb !important;
-        font-weight: 600;
-    }
-    
-    body.loaded {
-        opacity: 1;
-    }
-    
-    body {
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-`;
-document.head.appendChild(style); 
+// ---------- Spotlight that follows the cursor on project cards ----------
+cards.forEach(card => {
+  card.addEventListener('pointermove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+  });
+});
